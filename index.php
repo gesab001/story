@@ -23,13 +23,10 @@ function showHint(str) {
 
 <?php
 $title = $_POST["title"];
-
-$path    = '../pictures/david';
-$files = scandir($path); 
 ?>
 
 <form action="addstory.py" method="post" id="usrform">
-<input type="text" name="title" value="<?php echo $title;?>" placeholder="title"/>
+<input type="text" name="title" value="<?php echo $title;?>" placeholder="title"/> 
 <br>
 <textarea rows="4" cols="50" name="caption" placeholder="caption"></textarea>
 <br> 
@@ -45,6 +42,7 @@ $files = scandir($path);
 <input type="text" name="verse" placeholder="verse"/>
 <br>
 <input type="submit" value="submit"/>
+</form>
 </body>
 
 </html>
