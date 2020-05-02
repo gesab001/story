@@ -20,7 +20,10 @@ def downloadimage(filepath,url):
   command = "curl -L " + url + " -o " + filepath
   subprocess.call(command, shell=True)
 
-
+def updateGit():
+  subprocess.call("./gitupdater.sh", shell=True)
+  print("updated git")
+  
 # # Create instance of FieldStorage
 form = cgi.FieldStorage()
 #
@@ -83,3 +86,4 @@ print ("<form action='index.php' method='post'>")
 print ("<input type='hidden' name='title' value='"+title+"'/>")
 print ("<input type='submit' value='go back'/>")
 print ("</form>")
+updateGit()
