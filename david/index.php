@@ -114,7 +114,7 @@ xmlhttp.send();
 function loadSlides(slides){
   var filename = "./images/david-rest.jpg"; 
     var alt = "David is resting";
-    document.getElementById("slideimages").innerHTML +=   "<div class=\"item active\"><img src=\""+filename+"\" alt=\""+alt+"\" style=\"width:100%;\"></div>";
+    document.getElementById("slideimages").innerHTML +=   "<div class=\"item active\"><h1>"+slides[0].title+"</h1></div>";
    for (var x=0; x<slides.length; x++){
        var slide = slides[x];
        var biblereference = slide.bible;
@@ -140,18 +140,8 @@ function loadSlides(slides){
        var filename = "./images/"+slide.filename; 
        var alt = slide.caption;
        document.getElementById("slideimages").innerHTML +=   "<div class=\"item \"><h1>"+alt+"<figure><img src=\""+filename+"\" alt=\""+alt+"\" style=\"width:100%; height:800px;\"/><figcaption>"+toString+"</figcaption></figure></div>";
-       //var imageitem = "<div class=\"item\">";
-       //imageitem+= "<img src=\"./images/"+slide.filename+"\" alt=\""+slide.caption+"\" style=\"width:100%;\">";
-       //imageitem+= "</div>";
-       //carouselitems+=imageitem;
-       //var slideitem = document.createElement('li');
-       //slideitem.innerHTML = "<figure><img src='./images/"+slide.filename+"'/><figcaption>"+slide.caption+ toString+"</figcaption></figure>";
-       //document.getElementById("slides").appendChild(slideitem);
+
     }
-
-
-
-    //carouselinner.innerHTML = carouselitems;
   
    
 }
